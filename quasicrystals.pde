@@ -9,8 +9,6 @@
   You can press + and - to play with the zoom, and the arrows to move the viewpoint around. Space to stop moving the viewpoint.
 */
 
-import java.util.Date;
-
 int maxPoints = 1000; // Maximum number of total points
 float speed = 0.008; // How fast they will move
 float zoomSpeed = 0;
@@ -89,12 +87,6 @@ void keyPressed() {
     case'c':
     // Clear the screen
       background(bgColor);
-      break;
-    case 's':
-    // Save a screenshot
-      Date date = new Date(); // Including the system time in the screenshot file name allows us to keep any screenshots we want instead of overriding the same file all the time
-      String formattedDate = new java.text.SimpleDateFormat("yyyy-MM-dd.kk.mm.ss").format(date.getTime());
-      saveFrame("data/screenshot-" + formattedDate + ".png");
       break;
     case '-':
       zoomSpeed -= 0.002;
