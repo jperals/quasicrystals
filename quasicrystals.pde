@@ -1,9 +1,11 @@
 /*
-  "Chrystal smoke"
-  Relationship (again/still)
-  Generate points with the mouse input, and move them with repulsion forces.
-  Optionally, draw a line from each point to its closest point
-  I noticed that sometimes, a group of points can get "trapped" in a very small region and stops expanding (like black hole?)
+  "Quasicrystals"
+  Points are added by the user drawing on the screen, forming a line.
+  But these points are not still, they follow a subtle movement pattern --each point slowly moves away from its nearest neighbour.
+  Of course, as the points move, the nearest neighbour of each point will not always be the same, so the result is not just a wild expansion.
+  The system does expand, but at the same time a relatively regular, but always "shaking" pattern becomes visible at the same time.
+  I noticed that sometimes, a group of points can get "trapped" forming a rather regular mesh in a very small region and seem to stop expanding (like a black hole?)
+  I draw a line from each point to its nearest neighbour. The colors come in cycles from the outside to the inside.
 */
 
 import java.util.Date;
@@ -27,7 +29,8 @@ void setup()
 void draw()
 {
   int nPoints = points.size();
-  rect(0, 0, width, height);
+  noStroke();
+  rect(0, 0, width, height); // Clear the screen but with some degree of transparency
   for(int i = 0; i < nPoints; i++)
   {
     PVector currentPoint = points.get(i);
