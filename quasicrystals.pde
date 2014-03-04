@@ -1,11 +1,12 @@
 /*
   "Quasicrystals"
-  Points are added by the user drawing on the screen, forming a line.
+  Points are added by the user drawing on the screen, in principle forming a line.
   But these points are not still, they follow a subtle movement pattern --each point slowly moves away from its nearest neighbour.
   Of course, as the points move, the nearest neighbour of each point will not always be the same, so the result is not just a wild expansion.
-  The system does expand, but at the same time a relatively regular, but always "shaking" pattern becomes visible at the same time.
+  The system does expand, but at the same time a relatively regular, but always "shaking" pattern becomes gradually visible at the same time.
   I noticed that sometimes, a group of points can get "trapped" forming a rather regular mesh in a very small region and seem to stop expanding (like a black hole?)
   I draw a line from each point to its nearest neighbour. The colors come in cycles from the outside to the inside.
+  You can press + and - to play with the zoom, and the arrows to move the viewpoint around. Space to stop moving the viewpoint.
 */
 
 import java.util.Date;
